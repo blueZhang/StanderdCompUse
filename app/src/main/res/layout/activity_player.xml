@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.bluezhang.standerdcompuse.PlayerActivity">
+        <com.bluezhang.standerdcompuse.widgecs.FullVedioView
+                android:id="@+id/vidio_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+        <RelativeLayout
+                android:id="@+id/player_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#c999"
+                >
+
+                <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                />
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="share"
+                        />
+
+        </RelativeLayout>
+        <LinearLayout
+                android:id="@+id/player_down_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:background="#c666"
+                android:gravity="center_vertical"
+
+                >
+                <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@android:drawable/ic_media_previous"
+
+                        />
+                <Button
+                        android:id="@+id/btn_stop"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:onClick="btnStopMove"
+                        android:background="@android:drawable/ic_media_play"
+
+                        />
+                <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@android:drawable/ic_media_next"
+
+                        />
+
+                <SeekBar
+                        android:id="@+id/mc_seek_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@android:color/white"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="/"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="15:00"
+                        />
+        </LinearLayout>
+
+</FrameLayout>
